@@ -1,0 +1,39 @@
+program p8;
+var x, x2, s, p, count :integer;
+begin
+  write('Dati x');
+  readln(x);
+  s:=0;
+  p:=1;
+  x2:= x;
+  while x2 <> 0 do 
+  begin
+    s:= s + x2 mod 10;
+    x2:= x2 div 10;
+  end;
+  if x mod s = 0 then writeln('Suma este divizibila cu ',x)
+  else writeln('Suma nu este divizibila cu ',x);
+  while s <> 0 do
+    begin
+      count:= count +1;
+      s:= s div 10;
+    end;
+   if count = 2 then writeln ('Suma este din exact 2 cifre') 
+   else writeln('Suma nu este din 2 cifre');
+   x2:= x;
+   while x2 <> 0 do
+     begin
+      p:= p * x2 mod 10;
+      x2:= x2 div 10;
+     end;
+   count := 0;
+    if p > x then writeln('Produsul este mai mare ca ', x) 
+    else writeln('Produsul nu este mai mare ca ',x);
+   while p <> 0 do
+     begin
+      count:= count +1;
+      p:= p div 10;
+     end;
+    if count = 3 then writeln ('Produsul este din exact 3 cifre')
+    else writeln('Produsul nu este din 3 cifre');
+end.

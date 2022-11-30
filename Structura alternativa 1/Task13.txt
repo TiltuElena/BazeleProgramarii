@@ -1,0 +1,14 @@
+program p13;
+var n, m, nr, S ,r: real;
+begin
+  writeln('Dati nr de pungulite:');
+  readln(n);
+  writeln('Dati nr de straturi:');
+  readln(m);
+  writeln('Dati nr de metri:');
+  readln(nr);
+  writeln('Dati necesarul de seminte pe metru');
+  readln(S);
+  r:=S*m*nr;
+  if r < n*20 then write('Ajunge') else write ('Nu ajunge');
+end.

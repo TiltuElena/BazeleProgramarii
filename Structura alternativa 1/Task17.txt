@@ -1,0 +1,23 @@
+program p17;
+  var h1, m1, s1, h2, m2, s2, sumah, sumam, sumas : integer;
+begin
+  writeln('Introduceti h1, m1 si s1');
+  readln( h1, m1, s1);
+  writeln('Introduceti h2, m2 si s2');
+  readln( h2, m2, s2);
+  sumas:= s1 + s2;
+  sumam:= m1 + m2;
+  if sumas>=60 then
+    begin
+      sumam:=sumam+1;
+      sumas:= sumas-60;
+    end;
+  sumah:= h1+h2;
+  if sumam>= 60 then
+  begin
+    sumah:= sumah+1;
+    sumam:= sumam-60;
+  end;
+  writeln('Suma:');
+  writeln(sumah,' ore ', sumam, ' minute', sumas, 'secunde');
+end.

@@ -1,0 +1,12 @@
+program p6;
+var z, l, a, zu:integer;
+begin
+  write('Dati ziua');
+  readln(z);
+  write('Dati luna');
+  readln(l);
+  write('Dati an');
+  readln(a); 
+  if z = 31 then zu:= 1
+  else zu := z+1;
+end.

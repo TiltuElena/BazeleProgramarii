@@ -1,0 +1,15 @@
+program p7;
+var a, b, c, d:integer;
+begin
+  write('Dati a');
+  readln(a);
+  write('Dati b');
+  readln(b);
+  write('Dati c');
+  readln(c); 
+  write('Dati d');
+  readln(d); 
+  if c < d then writeln(a+b) else
+  if c > d then writeln(a*b) else
+    writeln(1/a+1/b);
+end.

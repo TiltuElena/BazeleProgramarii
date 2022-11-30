@@ -1,0 +1,10 @@
+program p16;
+var xs, ys, xd, yd, x, y: integer;
+begin
+  writeln('dati coordonatele fiecarui colt a dreptunghiului:');
+  readln(xs, ys, xd, yd);
+  writeln('dati puncyul p:');
+  readln(x, y);
+  if (x <= xs) and (x >= xd) and (y <= yd) and (y >= ys) then 
+    writeln('punctul p se afla in interiorul dreptunghiului');
+end.
