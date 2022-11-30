@@ -1,0 +1,27 @@
+program p3;
+var a, b, d, mc: integer;
+procedure cmmdc(a, b:integer; var d:integer);
+begin
+  while a <> b do
+    if (a>b) then a:= a - b
+      else b:= b-a;
+      d:=a;
+end;
+procedure cmmmc(a, b:integer; var mc:integer);
+var m, n: integer;
+begin
+  m:=a;
+  m:=b;
+  while m<>n do
+    if n<m then n:= n+a
+      else m:= m+b;
+    if m = n then mc:= m;
+end;
+begin
+  writeln('Dati doua numere:');
+  readln(a,b);
+  cmmdc(a, b, d);
+  cmmmc(a, b, mc);
+  writeln('Cel mai mare divizor comun a numerelor',a,'si',b,' este ',d);
+   writeln('Cel mai mic multiplu comun a numerelor',a,'si',b,' este ',mc);
+end.

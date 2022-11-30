@@ -1,0 +1,14 @@
+program p14;
+var a, b, ma, mg: real;
+procedure media(a, b: real; var mg: real; var ma:real);
+begin
+  ma:=(a + b)/2;
+  mg:=sqrt(a*b);
+end;
+begin
+  writeln('Dati a si b: ');
+  readln(a,b);
+  media(a, b, mg, ma);
+  writeln('Media aritmetica a nr: ',a,' si ',b,' este: ',ma);
+  writeln('Media geometrica a nr: ',a,' si ',b,' este: ',mg);
+end.

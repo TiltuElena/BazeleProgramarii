@@ -1,0 +1,21 @@
+program p9;
+var n, s, p: integer;
+procedure sumProd(n:integer; var s: integer; var p: integer);
+var i, j: integer;
+begin
+  while n<>0 do
+  begin
+    s:= s + n mod 10;
+    p:= p * (n mod 10);
+    n:= n div 10;
+  end;
+end;
+begin
+  write('Dati nr n: ');
+  readln(n);
+  p:=1;
+  s:=0;
+  sumProd(n, s, p);
+  writeln('Suma cifrelor nr ',n,' este: ', s);
+  writeln('Produsul cifrelor nr ',n,' este: ', p);
+end.

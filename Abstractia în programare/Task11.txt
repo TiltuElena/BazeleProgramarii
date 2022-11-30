@@ -1,0 +1,25 @@
+program p11;
+var count, n, p1, p2: integer;
+procedure nrCPrimeGemene(n: integer; var count: integer);
+var i, j, p: integer;
+begin
+  p:=3;
+  for i:= n to n*2 do
+    begin
+    for j:= 1 to i do
+      if i mod j = 0 then count:= count+1;
+     if count = 2 then 
+      if p+2 = i then
+        begin
+          writeln('Numerele ',p,' si ',i,' sunt numere prime gemene');
+          p:= i;
+        end;
+     count:=0;
+    end;
+end;
+begin
+  write('Dati nr n: ');
+  readln(n);
+  count:= 0;
+  nrCPrimeGemene(n, count);
+end.

@@ -1,0 +1,16 @@
+program p10;
+var n, count: integer;
+procedure nrCompus(n:integer; var count: integer);
+var i: integer;
+begin
+  for i:= 1 to n do
+    if n mod i = 0 then count:= count+1;
+end;
+begin
+  write('Dati nr n: ');
+  readln(n);
+  count:= 0;
+  nrCompus(n, count);
+  if count > 2 then write(n, ' este nr compus') 
+  else write(n, ' nu este nr compus');
+end.

@@ -1,0 +1,24 @@
+program p13;
+var i: integer;
+procedure divide(i: integer);
+var n1, d, count, c: integer;
+begin
+  count:=0;
+  c:=0;
+  n1:= i;
+  while n1 <> 0 do
+  begin   
+    d:= n1 mod 10;
+    n1:= n1 div 10;
+      if d <> 0 then if i mod d = 0 then count:= count+1;
+    c:= c+1;
+  end;
+  if c = count then writeln('Nr ',i, ' se divide la toate cifrele sale')
+  else writeln('Nr ',i ,' nu se divide la toate cifrele sale');
+  c:=0;
+  count:=0;
+end;
+
+begin
+  for i:= 20 to 30 do divide(i);
+end.

@@ -1,0 +1,15 @@
+program p6;
+var n: integer;
+procedure oglindire(n:integer);
+begin
+  while n<>0 do
+  begin
+    write(n mod 10);
+    n:= n div 10;
+  end;
+end;
+begin
+  writeln('Dati numarul:');
+  readln(n);
+  oglindire(n);
+end.

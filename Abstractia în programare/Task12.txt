@@ -1,0 +1,20 @@
+program p12;
+var n: integer;
+procedure fibonacci(n: integer);
+var i, f, f1, f2: integer;
+begin
+  f1:=0;
+  f2:= 1;
+ for i:= 1 to n do 
+   begin
+    write(f2, ' ');
+    f:= f2;
+    f2:= f1 + f2;
+    f1:= f;
+   end;
+end;
+begin
+  write('Dati nr n: ');
+  readln(n);
+  fibonacci(n);
+end.

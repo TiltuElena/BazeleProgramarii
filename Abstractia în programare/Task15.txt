@@ -1,0 +1,22 @@
+program p15;
+var n, s, p: integer;
+procedure sumProd(n: integer; var s: integer; var p:integer);
+var nr: integer;
+begin
+  s:=0;
+  p:=1;
+  while n <> 0 do
+  begin
+    nr:= n mod 10;
+    if nr mod 2 = 0 then p:= p*nr
+    else s:= s + nr;
+    n:= n div 10;
+  end;
+end;
+begin
+  writeln('Dati n: ');
+  readln(n);
+  sumProd(n, s, p);
+  writeln('Suma cifrelor impare a nr ',n,' este ',s);
+  writeln('Produsul cifrelor pare a nr ',n,' este ',p);
+end.

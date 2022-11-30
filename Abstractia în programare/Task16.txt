@@ -1,0 +1,17 @@
+program p16;
+var x1, x2, y1, y2, d, xm, ym: real;
+procedure distanta(x1, x2, y1, y2: real; var xm: real; var ym: real; var d: real);
+begin
+  d:= sqrt(sqr(x2-x1)+sqr(y2-y1));
+  xm:= (x1+x2)/2;
+  ym:= (y1+y2)/2;
+end;
+begin
+  writeln('Dati coordonatele punctului A(x,y): ');
+  readln(x1,y1);
+  writeln('Dati coordonatele punctului B(x,y): ');
+  readln(x2,y2);
+  distanta(x1, x2, y1, y2, xm, ym, d);
+  writeln('Distanta dintre punctele A si B este ',d);
+  writeln('Coordonatele punctului de mijloc sunt: x-',xm,', y-',ym);
+end.
