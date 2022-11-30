@@ -1,0 +1,11 @@
+program p15;
+  var n, x, a, count, i: integer;
+begin
+  writeln('dari n: ');
+  readln(n);
+  for i:= 1 to n-1 do
+  begin
+    if i + i+1 = n then writeln (n,' = ',i,' + ', i+1) 
+    else writeln('Nu este posibil');
+  end;
+end.

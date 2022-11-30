@@ -1,0 +1,26 @@
+program p7;
+  var nr, pcount, ps, i, ns, ncount: integer;
+  mdn: real;
+begin
+  pcount:=0;
+  ps:=0;
+writeln('Dati numerele: ');
+for i:= 1 to 10 do
+begin
+  write('Nr ', i, ': ');
+  readln(nr);
+  if nr>0 then 
+    begin
+    pcount:= pcount + 1;
+    ps:= ps + nr;
+    end;
+  if nr < 0 then
+  begin
+    ncount:= ncount + 1;
+    ns:= ns + nr;
+  end;
+  end;
+  mdn:= ps / pcount;
+  writeln('Media nr negative: ' , mdn);
+  writeln('Nr nr pozitive: ', pcount, ' suma nr pozitive: ', ps);
+end.

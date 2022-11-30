@@ -1,0 +1,17 @@
+program p5;
+  var i, nr, n, max, min: integer;
+begin
+  writeln('dati n:');
+  readln(n);
+  writeln('dati numerele:');
+  readln(nr);
+  max:= nr;
+  min:= nr;
+  for i:= 1 to n-1 do 
+  begin
+    readln(nr);
+    if nr > max then max:= nr;
+    if nr < min then min:= nr;
+  end;
+  writeln('Nr maxim: ', max, ' si nr minim: ', min);
+end.

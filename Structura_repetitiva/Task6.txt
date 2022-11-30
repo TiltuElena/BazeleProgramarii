@@ -1,0 +1,18 @@
+program p6;
+  var nr, s, nr2: integer;
+begin
+  nr:=100;
+  s:=0;
+while nr < 1000 do  
+  begin
+    nr2:= nr;
+    while nr2 <> 0 do
+    begin
+      s:= s + (nr2 mod 10);
+      nr2:= nr2 div 10;
+    end;
+    if s mod 5 = 0 then writeln('Divizibil cu 5 ',nr);
+    nr:= nr + 1;
+    s:=0;
+  end;
+end.
