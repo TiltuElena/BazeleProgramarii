@@ -1,0 +1,42 @@
+program p4;
+type Matrix=Array[1..30] of Array[1..30] of integer;
+var m, b: Matrix;
+  i, j, n, k, min, max: integer;      
+begin
+  writeln('Dati n: ');
+  readln(n);
+  writeln('Dati k: ');
+  readln(k);
+  
+  writeln('Dati elementele matricei: ');
+  for i:= 1 to n do
+    for j:= 1 to k do
+      readln(m[i,j]);
+  writeln;
+  
+  for i:= 1 to n do
+    begin
+    writeln;
+    for j:= 1 to k do
+        write(m[i,j],' ');
+    end;  
+   writeln;
+   
+   min:= m[1,1];
+   max:= m[1,1];  
+   for i:= 1 to n do
+     begin
+     for j:= 1 to k do 
+        if m[i,j] < min then min:= m[i,j];
+     writeln(min);
+     min:= m[i+1,1];
+     end;  
+     
+   for j:= 1 to k do
+     begin
+     for i:= 1 to n do 
+        if m[i,j] > max then max:= m[i,j];
+     writeln(max);
+     max:= m[1,j+1];
+     end; 
+end.

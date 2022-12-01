@@ -1,0 +1,54 @@
+program p13;
+type Matrix=Array[1..30] of Array[1..30] of integer;
+var m, b: Matrix;
+  i, j, n, p, pi, min, max: integer;      
+begin
+  writeln('Dati n: ');
+  readln(n);
+  
+  writeln('Dati p: ');
+  readln(p);
+  
+  writeln('Dati elementele matricei: ');
+  for i:= 1 to n do
+    for j:= 1 to n do
+      readln(m[i,j]);
+  writeln;
+  
+  pi:= p;
+  max:= pi mod 10; 
+  min:= pi mod 10;
+  while pi <> 0 do
+  begin
+    if min > pi mod 10 then min := pi mod 10;
+    if max < pi mod 10 then max := pi mod 10;
+    pi:= pi div 10;
+  end;
+  
+  for i:= 1 to n do
+    begin
+    writeln;
+    for j:= 1 to n do
+        write(m[i,j],' ');
+    end;  
+   writeln;
+   
+  for i:= 1 to n do
+    for j:= 1 to n do
+      if j = i then m[i,j] := 0;
+    
+  for i:= 1 to n do
+    for j:= i+1 to n do    
+      m[i,j]:= max;
+  
+  for j:= 1 to n do
+    for i:= j+1 to n do    
+      m[i,j]:= min;
+  
+  for i:= 1 to n do
+    begin
+    writeln;
+    for j:= 1 to n do
+        write(m[i,j],' ');
+    end;  
+end.

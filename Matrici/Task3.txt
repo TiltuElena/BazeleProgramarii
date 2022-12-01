@@ -1,0 +1,33 @@
+program p3;
+type Matrix=Array[1..30] of Array[1..30] of integer;
+var m, b: Matrix;
+  i, j, n, s1, s2: integer;      
+begin
+  writeln('Dati n: ');
+  readln(n);
+  s1:=0;
+  writeln('Dati elementele matricei: ');
+  for i:= 1 to n do
+    for j:= 1 to n do
+      readln(m[i,j]);
+  writeln;
+  
+  for i:= 1 to n do
+    begin
+    writeln;
+    for j:= 1 to n do
+        write(m[i,j],' ');
+    end;  
+    
+  for i:= 1 to n do
+    for j:=1 to n-i do
+      s1:= s1 + m[i,j];
+  writeln; 
+  writeln(s1);
+  
+   for i:= n downto 1 do
+    for j:=1+i to n do
+      s2:= s2 + m[i,j];
+  writeln; 
+  writeln(s2);
+end.
