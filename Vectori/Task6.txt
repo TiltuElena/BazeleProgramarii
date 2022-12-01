@@ -1,0 +1,36 @@
+program p6;
+  type Vector = array[1..10] of integer;
+  var a: Vector;
+  i, n, k, x, j:integer;
+begin
+  write('Dati n: ');
+  readln(n);
+  write('Dati k: ');
+  readln(k);
+  for i:= 1 to n do
+    readln(a[i]);
+  for i:= k-1 downto 1 do
+    begin
+      x:= a[i];
+      j:= i-1;
+      while(j>=1) and (a[j]>x) do
+      begin
+        a[j+1]:=a[j];
+      j:=j-1;
+      end;
+      a[j+1]:=x;
+    end;  
+  for i:= k+1 to n-1 do
+    begin
+      x:= a[i];
+      j:= i-1;
+      while(j>=1) and (a[j]>x) do
+      begin
+        a[j+1]:=a[j];
+        j:=j-1;
+      end;
+      a[j+1]:=x;
+    end;  
+  for i:= 1 to n do
+    writeln('a[',i,'] = ',a[i]);
+end.

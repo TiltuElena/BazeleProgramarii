@@ -1,0 +1,15 @@
+program p3;
+  type Vector = array[1..10] of integer;
+  var a: Vector;
+  i, n, interm:integer;
+begin
+  write('Dati n: ');
+  readln(n);
+  for i:= 1 to n do
+    readln(a[i]);
+  interm:= a[1];
+  a[1]:= a[n];
+  a[n]:= interm;
+  for i:= 1 to n do
+    writeln('a[',i,'] = ',a[i]);
+end.

@@ -1,0 +1,15 @@
+program p1;
+  type Vector = array[1..10] of integer;
+  var a: Vector;
+  i, n:integer;
+begin
+  write('Dati n: ');
+  readln(n);
+  for i:= 1 to n do
+  begin
+    readln(a[i]);
+    if i mod 2 = 0 then a[i]:= a[i]*(-1);
+  end;
+  for i:= 1 to n do
+    writeln('a[',i,'] = ',a[i]);
+end.
