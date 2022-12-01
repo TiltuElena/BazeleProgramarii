@@ -1,0 +1,12 @@
+program p1;
+  type Vector = array[1..10] of integer;
+  var a: Vector;
+  i, n:integer;
+begin
+  write('Dati n: ');
+  readln(n);
+  for i:= 1 to n do
+    readln(a[i]);
+  for i:= 1 to n do
+    if a[i] = a[i+1] then writeln('Exista') else writeln('Nu exista');
+end.

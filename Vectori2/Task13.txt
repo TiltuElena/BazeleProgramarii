@@ -1,0 +1,20 @@
+program p13;
+  type Vector = array[1..10] of integer;
+  var a, b: Vector;
+  i, n, j, count:integer;
+begin
+  write('Dati n: ');
+  readln(n);
+  count:= 0;
+  writeln('Dati elementele vectorului a:');
+  for i:= 1 to n do
+    readln(a[i]);
+  writeln('Dati elementele vectorului b:');
+    for i:= 1 to n do
+    readln(b[i]);
+  for i:= 1 to n do
+    for j:= 1 to n do
+      if a[i] = b[j] then count:= count +1;
+  if count <> 0 then write('In vectorul a exista elemente din vectorul b')
+  else write('In vectorul a nu exista elemente din vectorul b');
+end.

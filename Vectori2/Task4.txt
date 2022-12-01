@@ -1,0 +1,18 @@
+program p4;
+  type Vector = array[1..10] of integer;
+  var a: Vector;
+  i, n, m, count:integer;
+begin
+  write('Dati n: ');
+  readln(n);
+  write('Dati m: ');
+  readln(m);
+  count:= 0;
+  for i:= 1 to n do
+    begin
+    readln(a[i]);
+    if (a[i] >= 1) and (a[i] <= m) then count:= count+1;
+    end;
+  if count = n then writeln('Apartine intervalului') 
+  else writeln('Nu spartine intervalului') 
+end.

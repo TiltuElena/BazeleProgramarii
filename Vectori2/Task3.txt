@@ -1,0 +1,15 @@
+program p3;
+  type Vector = array[1..10] of integer;
+  var a: Vector;
+  i, j, n, count:integer;
+begin
+  write('Dati n: ');
+  readln(n);
+  count:= 0;
+  for i:= 1 to n do
+    readln(a[i]);
+  for i:= 1 to n-1 do
+    if a[i] < a[i+1] then count:= count+1;
+  if count = n-1 then write('Vectorul este ordonat crescator')
+  else write('Vectorul nu este ordonat crescator');
+end.
