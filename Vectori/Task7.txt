@@ -1,0 +1,22 @@
+program p7;
+  type Vector = array[1..10] of integer;
+  var a: Vector;
+  i, n:integer;
+begin
+  write('Dati n: ');
+  readln(n);
+  writeln('Dati elementele vectorului:');
+  for i:= 1 to n do
+  begin
+    readln(a[i]);
+  end;
+  writeln('Rezultatul:');
+    for i:= 1 to n do
+  begin
+    if i mod 2 = 0 then writeln(a[i]);
+  end;
+    for i:= 1 to n do
+  begin
+    if i mod 2 <> 0 then writeln(a[i]);
+  end;
+end.

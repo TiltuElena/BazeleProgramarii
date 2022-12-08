@@ -1,0 +1,20 @@
+program p10;
+  type Vector = array[1..10] of integer;
+  var a: Vector;
+  i, n, k:integer;
+begin
+  write('Dati n: ');
+  readln(n);
+  write('Dati k: ');
+  readln(k);  
+  writeln('Dati elementele vectorului:');
+  for i:= 1 to n do
+  begin
+    readln(a[i]);
+  end;
+  writeln('Rezultatul:');
+  for i:= 1 to n do
+  begin
+    if (a[i] + a[i+1]) mod k = 0 then writeln(a[i],' ',a[i+1]);
+  end;
+end.

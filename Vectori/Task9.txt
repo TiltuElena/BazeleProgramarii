@@ -1,0 +1,21 @@
+program p9;
+  type Vector = array[1..10] of integer;
+  var a: Vector;
+  i, n, j, res, int:integer;
+begin
+  write('Dati n: ');
+  readln(n);
+  writeln('Dati elementele vectorului:');
+  for i:= 1 to n do
+  begin
+    readln(a[i]);
+  end;
+  res:= 0;
+  int:= 0;
+  writeln('Rezultatul:');
+  for i:= 1 to n do
+    for j:= 1 to n do 
+      if a[i] = a[j] then res := res + 1;
+      if i = j then int:= int + 1;
+  writeln('Nr elementelor diferite: ', (res - int) div 2);
+end.
