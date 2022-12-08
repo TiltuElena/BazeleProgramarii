@@ -1,0 +1,19 @@
+program p11;
+type Matrix=Array[1..30] of Array[1..30] of integer;
+var m: Matrix;
+  i, j, n, par: integer;      
+begin
+  writeln('Dati n: ');
+  readln(n);
+  writeln('Elementele matricei: ');
+  par:=2;
+  for i:= 1 to n do
+    begin
+    writeln;
+    for j:= 1 to n do
+      begin
+        write(par,' ');
+        par:= par + 2;
+      end;
+    end;
+end.
