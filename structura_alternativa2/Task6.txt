@@ -1,0 +1,17 @@
+program p6;
+var c: char;
+    t, l: real;
+begin
+  write('Dati nr unitatii de masura: ');
+  readln(c);
+  write('Dati lungimea: ');
+  readln(l);
+  case c of
+    '1': t:= l / 10;
+    '2': t:= l * 1000;
+    '3': t:= l;
+    '4': t:= l / 1000;
+    '5': t:= l / 100;
+  end;
+  writeln('Lungimea ',l,' in metri: ', t);
+end.

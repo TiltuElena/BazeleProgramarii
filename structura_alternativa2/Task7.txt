@@ -1,0 +1,59 @@
+program p7;
+var n, i, c1, c2, c3: integer;
+begin
+  write('Introduceti n: ');
+  readln(n);
+  c1:= n div 100;
+  c2:= n div 10 mod 10;
+  c3:= n mod 10;
+  
+  case c1 of 
+    1: write('o suta');
+    2: write('doua sute');
+    3: write('trei sute');
+    4: write('patru sute');
+    5: write('cinci sute');
+    6: write('sase sute');
+    7: write('sapte sute');
+    8: write('opt sute');
+    9: write('noua sute');
+  end;
+  
+    case c2 of 
+    2: write(' douazeci');
+    3: write(' treizeci');
+    4: write(' patruzeci');
+    5: write(' cincizeci');
+    6: write(' saizeci');
+    7: write(' saptezeci');
+    8: write(' optzeci');
+    9: write(' nouazeci');
+  end;
+  
+  if (c2 = 1) then
+    case c3 of
+    0: write(' zece');
+    1: write(' unsprezece');
+    2: write(' doisprezece');
+    3: write(' treisprezece');
+    4: write(' paisprezece');
+    5: write(' cincisprezece');
+    6: write(' saisprezece');
+    7: write(' saptesprezece');
+    8: write(' optsprezece');
+    9: write(' nouasprezece');
+  end;
+  
+  if (c2 <> 1) then  
+    case c3 of 
+    1: write(' si unu');
+    2: write(' si doi');
+    3: write(' si trei');
+    4: write(' si patru');
+    5: write(' si cinci');
+    6: write(' si sase');
+    7: write(' si sapte');
+    8: write(' si opt');
+    9: write(' si noua');
+  end;
+end.

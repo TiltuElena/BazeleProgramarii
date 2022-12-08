@@ -1,0 +1,19 @@
+program p5;
+var c: char;
+begin
+  write('Dati c: ');
+  readln(c);
+  case c of
+    '0': writeln('zero');
+    '1': writeln('unu');
+    '2': writeln('doi');
+    '3': writeln('trei');
+    '4': writeln('patru');
+    '5': writeln('cinci');
+    '6': writeln('sase');
+    '7': writeln('sapte');
+    '8': writeln('opt');
+    '9': writeln('noua')
+    else writeln('Nu este cifra');
+  end;
+end.
