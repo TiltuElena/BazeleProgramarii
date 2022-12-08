@@ -1,0 +1,31 @@
+program p13;
+type Matrix=Array[1..30] of Array[1..30] of integer;
+var m: Matrix;
+  i, j, n, k, p, max, min, inter: integer;      
+begin
+  writeln('Dati n: ');
+  readln(n);
+  write('Dati p de 3 cifre: ');
+  readln(p);
+  max:= p div 100;
+  min:= p div 100;
+  while p <> 0 do
+  begin
+    if max < p mod 10 then max:= p mod 10;
+    if min > p mod 10 then min:= p mod 10;
+    p:= p div 10;
+  end;
+  writeln('Elementele matricei: ');
+  inter:= max;
+  for i:= 1 to n do
+    begin
+    writeln;
+    for j:= 1 to n do
+      begin
+        if i = j then inter:= 0;
+        if i>j then inter:= min;
+        write(inter,' ');
+        inter:= max;  
+      end;
+    end;
+end.
